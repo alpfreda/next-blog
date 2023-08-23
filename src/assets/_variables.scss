@@ -1,0 +1,91 @@
+$max-width: 68.75rem;
+$border-radius: 1.125rem;
+$font-family: 'Lato', sans-serif;
+
+$foreground-color: #333;
+$foreground-color-dark: #333;
+$background-start-color: #f5f5f5;
+$background-start-color-dark: #0a0908;
+$background-end-color: #eee;
+$background-end-color-dark: #09090a;
+
+$primary-color: #333333;
+$primary-color-dark: #fff;
+$secondary-color: #333333;
+$secondary-color-dark: #a6a3a3;
+
+$primary-bg-color: #ddd;
+$primary-bg-color-dark: #141414;
+
+:root {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+
+  --background-start-color: #{$background-start-color};
+  --background-end-color: #{$background-end-color};
+
+  --primary-bg-color: #{$primary-bg-color};
+
+  --intro-avatar-size: 6rem;
+  --intro-title-max-width: 38rem;
+
+  --intro-title-start-color: #333;
+  --intro-title-middle-color: #444;
+  --intro-title-end-color: #555;
+
+  --last-posts-header-color: #{$secondary-color};
+  --last-post-item-background: #fff;
+  --last-post-item-summary-color: #666;
+
+  --blog-item-background: #fff;
+
+  --contact-header-color: #333;
+  --contact-sub-header-color: #777;
+  --contact-info-color: #777;
+  --contact-info-icon-color: #333;
+  --contact-info-link-color: #000;
+
+  --form-control-bg-color: #{lighten($primary-bg-color, 20%)};
+  --form-control-border-color: #{$primary-bg-color};
+  --form-control-color: #{$primary-color};
+  --form-label-color: #{$secondary-color};
+
+  --footer-icon-color: #{$primary-color};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #{$primary-color-dark};
+    --secondary-color: #{$secondary-color-dark};
+
+    --background-start-color: #{$background-start-color-dark};
+    --background-end-color: #{$background-end-color-dark};
+
+    --primary-bg-color: #{$primary-bg-color-dark};
+
+    --intro-title-start-color: #eee;
+    --intro-title-middle-color: #ddd;
+    --intro-title-end-color: #ccc;
+
+    --last-post-item-background: #{$primary-bg-color-dark};
+    --last-posts-header-color: #{$secondary-color-dark};
+    --last-post-item-summary-color: #aaa;
+
+    --blog-item-background: #{$primary-bg-color-dark};
+    --blog-header-color: #{$secondary-color-dark};
+    --blog-item-summary-color: #aaa;
+
+    --contact-header-color: #fff;
+    --contact-sub-header-color: #a6a3a3;
+    --contact-info-color: #a6a3a3;
+    --contact-info-icon-color: #fff;
+    --contact-info-link-color: #fff;
+
+    --form-control-bg-color: #{$primary-bg-color-dark};
+    --form-control-border-color: #{lighten($primary-bg-color-dark, 20%)};
+    --form-control-color: #{$primary-color-dark};
+    --form-label-color: #{$secondary-color-dark};
+
+    --footer-icon-color: #{$primary-color-dark};
+  }
+}
