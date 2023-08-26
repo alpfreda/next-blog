@@ -1,0 +1,66 @@
+.navbar {
+  padding: 1.5rem;
+
+  @include for-tablet-portrait-up {
+    padding: 2rem;
+  }
+
+  ul {
+    @include flexbox($wrap: wrap, $justifyContent: center);
+    gap: 0 1rem;
+    list-style: none;
+    padding: 0;
+    font-weight: bold;
+    text-align: center;
+
+    @include for-tablet-portrait-up {
+      gap: 0 2rem;
+      justify-content: flex-end;
+    }
+
+    .nav-logo {
+      margin-right: auto;
+      flex-basis: 100%;
+      margin-bottom: 1.5rem;
+      text-align: center;
+
+      .logo {
+        margin-right: auto;
+        overflow: hidden;
+        padding: 1rem;
+        background: var(--primary-bg-color);
+        border-radius: 1rem;
+
+        @include for-tablet-portrait-up {
+          padding: 0 1rem;
+          background: transparent;
+        }
+
+        .name {
+          margin-left: 1rem;
+          z-index: -1;
+          animation: fadeInLeft 0.7s both;
+        }
+      }
+
+      @include for-tablet-portrait-up {
+        flex-basis: auto;
+        margin-bottom: 0;
+        text-align: left;
+      }
+    }
+
+    .nav-item {
+      color: var(--secondary-color);
+      font-size: 1.125rem;
+      opacity: 0;
+      animation: fadeIn 0.5s cubic-bezier(0.14, 0.18, 0.16, 1.02) forwards;
+      animation-delay: 0.5s;
+      border-bottom: 2px solid transparent;
+
+      &.active {
+        border-bottom-color: var(--secondary-color);
+      }
+    }
+  }
+}
