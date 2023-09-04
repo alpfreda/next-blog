@@ -1,4 +1,6 @@
-const Heart: React.FC = () => (
+import { Icon } from "@/interfaces/icon.interface"
+
+const Heart: React.FC<Icon> = ({ size = 20 }) => (
   <svg
     viewBox='0 0 1792 1792'
     preserveAspectRatio='xMidYMid meet'
