@@ -8,10 +8,10 @@ import Logo from './logo'
 const Navbar = () => {
   const pathname = usePathname()
   const navLinks: NavLink[] = [
-    { name: 'Home', link: '/' },
-    { name: 'Blog', link: '/blog' },
-    { name: 'Projects', link: '/projects' },
-    { name: 'Contact', link: '/contact' },
+    { name: 'Home', link: '/', exact: true },
+    { name: 'Blog', link: '/blog', exact: false },
+    { name: 'Portfolio', link: '/portfolio', exact: false },
+    { name: 'Contact', link: '/contact', exact: true },
   ]
   return (
     <nav className='navbar'>
@@ -22,7 +22,7 @@ const Navbar = () => {
           </Link>
         </li>
         {navLinks.map(navItem => {
-          const isActive: boolean = navItem.link === pathname
+          const isActive: boolean = navItem.exact ? navItem.link === pathname : pathname.includes(navItem.link)
           return (
             <li
               key={navItem.name}
