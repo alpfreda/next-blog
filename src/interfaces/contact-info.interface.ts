@@ -4,6 +4,7 @@ interface ContactInfoItem {
 }
 
 export interface ContactInfo {
+  id: string
   email: ContactInfoItem
   linkedin: ContactInfoItem
   github: ContactInfoItem

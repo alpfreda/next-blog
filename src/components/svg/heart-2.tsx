@@ -1,6 +1,6 @@
 import { Icon } from '@/interfaces/icon.interface'
 
-const Check: React.FC<Icon> = ({ size = 20 }) => (
+const Heart2: React.FC<Icon> = ({ size = 20 }) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     xmlnsXlink='http://www.w3.org/1999/xlink'
@@ -23,25 +23,8 @@ const Check: React.FC<Icon> = ({ size = 20 }) => (
         opacity: 1,
       }}
       transform='translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)'>
-      <circle
-        cx={45}
-        cy={45}
-        r={45}
-        style={{
-          stroke: 'none',
-          strokeWidth: 1,
-          strokeDasharray: 'none',
-          strokeLinecap: 'butt',
-          strokeLinejoin: 'miter',
-          strokeMiterlimit: 10,
-          fill: 'rgb(40,201,55)',
-          fillRule: 'nonzero',
-          opacity: 1,
-        }}
-        transform='  matrix(1 0 0 1 0 0) '
-      />
       <path
-        d='M 38.478 64.5 c -0.01 0 -0.02 0 -0.029 0 c -1.3 -0.009 -2.533 -0.579 -3.381 -1.563 L 21.59 47.284 c -1.622 -1.883 -1.41 -4.725 0.474 -6.347 c 1.884 -1.621 4.725 -1.409 6.347 0.474 l 10.112 11.744 L 61.629 27.02 c 1.645 -1.862 4.489 -2.037 6.352 -0.391 c 1.862 1.646 2.037 4.49 0.391 6.352 l -26.521 30 C 40.995 63.947 39.767 64.5 38.478 64.5 z'
+        d='M 45 87.273 L 45 87.273 c -0.849 0 -1.605 -0.536 -1.887 -1.337 c -3.033 -8.631 -10.638 -13.596 -18.69 -18.853 C 12.976 59.61 0 51.14 0 30.374 C 0 15.129 12.197 2.727 27.189 2.727 c 6.616 0 12.869 2.385 17.811 6.756 c 4.943 -4.371 11.196 -6.756 17.812 -6.756 C 77.804 2.727 90 15.129 90 30.374 c 0 20.766 -12.976 29.236 -24.423 36.71 c -8.053 5.257 -15.658 10.222 -18.69 18.853 C 46.605 86.737 45.849 87.273 45 87.273 z M 27.189 6.727 C 14.402 6.727 4 17.335 4 30.374 c 0 18.601 10.982 25.771 22.61 33.361 c 7.02 4.582 14.244 9.299 18.39 16.7 c 4.146 -7.401 11.37 -12.117 18.39 -16.7 C 75.018 56.145 86 48.975 86 30.374 C 86 17.335 75.598 6.727 62.812 6.727 c -6.188 0 -12.006 2.455 -16.385 6.914 c -0.376 0.383 -0.89 0.599 -1.427 0.599 l 0 0 c -0.537 0 -1.051 -0.216 -1.427 -0.599 C 39.195 9.182 33.376 6.727 27.189 6.727 z'
         style={{
           stroke: 'none',
           strokeWidth: 1,
@@ -49,7 +32,7 @@ const Check: React.FC<Icon> = ({ size = 20 }) => (
           strokeLinecap: 'butt',
           strokeLinejoin: 'miter',
           strokeMiterlimit: 10,
-          fill: 'rgb(255,255,255)',
+          fill: 'rgb(0,0,0)',
           fillRule: 'nonzero',
           opacity: 1,
         }}
@@ -60,4 +43,4 @@ const Check: React.FC<Icon> = ({ size = 20 }) => (
   </svg>
 )
 
-export default Check
+export default Heart2

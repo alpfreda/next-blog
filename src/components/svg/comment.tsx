@@ -1,6 +1,6 @@
 import { Icon } from '@/interfaces/icon.interface'
 
-const Check: React.FC<Icon> = ({ size = 20 }) => (
+const Comment: React.FC<Icon> = ({ size = 20 }) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     xmlnsXlink='http://www.w3.org/1999/xlink'
@@ -23,25 +23,8 @@ const Check: React.FC<Icon> = ({ size = 20 }) => (
         opacity: 1,
       }}
       transform='translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)'>
-      <circle
-        cx={45}
-        cy={45}
-        r={45}
-        style={{
-          stroke: 'none',
-          strokeWidth: 1,
-          strokeDasharray: 'none',
-          strokeLinecap: 'butt',
-          strokeLinejoin: 'miter',
-          strokeMiterlimit: 10,
-          fill: 'rgb(40,201,55)',
-          fillRule: 'nonzero',
-          opacity: 1,
-        }}
-        transform='  matrix(1 0 0 1 0 0) '
-      />
       <path
-        d='M 38.478 64.5 c -0.01 0 -0.02 0 -0.029 0 c -1.3 -0.009 -2.533 -0.579 -3.381 -1.563 L 21.59 47.284 c -1.622 -1.883 -1.41 -4.725 0.474 -6.347 c 1.884 -1.621 4.725 -1.409 6.347 0.474 l 10.112 11.744 L 61.629 27.02 c 1.645 -1.862 4.489 -2.037 6.352 -0.391 c 1.862 1.646 2.037 4.49 0.391 6.352 l -26.521 30 C 40.995 63.947 39.767 64.5 38.478 64.5 z'
+        d='M 88 90 c -0.245 0 -0.492 -0.045 -0.729 -0.138 l -17.928 -7.012 C 62.082 87.531 53.688 90 45 90 C 20.187 90 0 69.813 0 45 C 0 20.187 20.187 0 45 0 c 24.813 0 45 20.187 45 45 c 0 8.688 -2.469 17.082 -7.149 24.344 l 7.012 17.928 c 0.29 0.74 0.113 1.581 -0.448 2.143 C 89.032 89.797 88.521 90 88 90 z M 45 4 C 22.393 4 4 22.393 4 45 s 18.393 41 41 41 c 8.24 0 16.188 -2.437 22.984 -7.045 c 0.545 -0.369 1.238 -0.448 1.851 -0.207 l 14.638 5.725 l -5.725 -14.638 c -0.24 -0.613 -0.163 -1.306 0.207 -1.851 C 83.563 61.188 86 53.24 86 45 C 86 22.393 67.607 4 45 4 z'
         style={{
           stroke: 'none',
           strokeWidth: 1,
@@ -49,7 +32,7 @@ const Check: React.FC<Icon> = ({ size = 20 }) => (
           strokeLinecap: 'butt',
           strokeLinejoin: 'miter',
           strokeMiterlimit: 10,
-          fill: 'rgb(255,255,255)',
+          fill: 'rgb(0,0,0)',
           fillRule: 'nonzero',
           opacity: 1,
         }}
@@ -60,4 +43,4 @@ const Check: React.FC<Icon> = ({ size = 20 }) => (
   </svg>
 )
 
-export default Check
+export default Comment
