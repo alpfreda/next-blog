@@ -1,12 +1,13 @@
-import Github from '../svg/github'
-import Heart from '../svg/heart'
+import Icon from '../svg'
 
 const Footer: React.FC = () => {
   return (
     <footer>
-      Made with <Heart /> You can get it for free
-      <a target='_blank' href='https://github.com/alpfreda/next-blog'>
-        <Github />
+      Made with <Icon name='heart' /> You can get it for free
+      <a
+        target='_blank'
+        href='https://github.com/alpfreda/next-blog'>
+        <Icon name='github' />
       </a>
     </footer>
   )

@@ -1,8 +1,13 @@
+'use client'
+
+import { useHeader } from './hooks/header-hook'
 import Navbar from './navbar'
 
 const Header: React.FC = () => {
+  const { classes } = useHeader()
+
   return (
-    <header>
+    <header className={classes}>
       <Navbar />
     </header>
   )
