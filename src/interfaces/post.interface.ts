@@ -9,4 +9,5 @@ export interface Post {
   like: number
   comment: number
   view: number
+  visible: boolean
 }

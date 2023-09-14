@@ -3,9 +3,4 @@ export interface Intro {
   name: string
   title: string
   avatar: string
-  meta: {
-    title: string
-    description?: string
-    keywords?: string
-  }
 }
