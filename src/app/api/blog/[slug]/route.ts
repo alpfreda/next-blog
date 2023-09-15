@@ -1,3 +1,4 @@
+import { DB } from '@/constants/consent'
 import { Post } from '@/interfaces/post.interface'
 import { handleErrorResponse } from '@/utils/error-response'
 import { Filter } from 'firebase-admin/firestore'
@@ -6,19 +7,19 @@ import { add, get, update } from '../../../../utils/firebase'
 
 async function getPostBySlug(slug: string) {
   const filter: Filter[] = [Filter.where('slug', '==', slug)]
-  return await get('posts', filter)
+  return await get(DB.POSTS, filter)
 }
 
 async function getPostViewByIp(postId: string, ip: string) {
   const filter: Filter[] = [Filter.where('postId', '==', postId), Filter.where('ip', '==', ip)]
-  return await get('post-views', filter)
+  return await get(DB.POST_VIEWS, filter)
 }
 
 async function addPostView(post: Post, ip: string = '127.0.0.1') {
   const getView = await getPostViewByIp(post.id, ip)
   if (!getView) {
-    await add('post-views', { postId: post.id, ip })
-    await update('posts', post.id, { ...post, view: post.view + 1 })
+    await add(DB.POST_VIEWS, { postId: post.id, ip })
+    await update(DB.POSTS, post.id, { ...post, view: post.view + 1 })
   }
 }
 

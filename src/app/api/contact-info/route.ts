@@ -1,4 +1,4 @@
-import { DB } from '@/constants/db'
+import { DB } from '@/constants/consent'
 import { handleErrorResponse } from '@/utils/error-response'
 import { NextResponse } from 'next/server'
 import { get } from '../../../utils/firebase'
