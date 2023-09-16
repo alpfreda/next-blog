@@ -13,12 +13,14 @@ const LastPostItem: React.FC<LastPostItemProps> = ({ item }) => {
       className='last-post-item'>
       <h4 className='title'>{item.title}</h4>
       <p className='summary'>{item.summary}</p>
-      <Image
-        src={item.img}
-        width={400}
-        height={200}
-        alt={item.title}
-      />
+      <div className='img-box'>
+        <Image
+          src={item.img}
+          width={300}
+          height={150}
+          alt={item.title}
+        />
+      </div>
     </Link>
   )
 }
