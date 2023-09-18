@@ -7,9 +7,13 @@ interface PortfolioItemProps {
 
 const PortfolioItem: React.FC<PortfolioItemProps> = ({ item }) => {
   return (
-    <div className='portfolio-item'>
+    <div
+      data-testid='portfolio-item'
+      className='portfolio-item'>
       <h4 className='title'>{item.title}</h4>
-      <div className='portfolio-item-technologies'>
+      <div
+        data-testid={`technologies-${item.id}`}
+        className='portfolio-item-technologies'>
         {item.technologies.map(technology => (
           <span
             key={technology}
@@ -27,22 +31,22 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ item }) => {
           href={item.demo}
           className='btn demo'
           target='_blank'>
-          <Icon
-            name='github'
-            size={18}
-          />
           Demo
         </a>
-        <a
-          href={item.source}
-          className='btn source'
-          target='_blank'>
-          <Icon
-            name='global'
-            size={18}
-          />
-          Source
-        </a>
+        {item.source ? (
+          <a
+            href={item.source}
+            className='btn source'
+            target='_blank'>
+            Source
+          </a>
+        ) : (
+          <button
+            disabled
+            className='btn source'>
+            Source
+          </button>
+        )}
       </div>
     </div>
   )

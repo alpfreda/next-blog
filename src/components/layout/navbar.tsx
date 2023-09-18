@@ -5,16 +5,20 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import Logo from './logo'
 
+const navLinks: NavLink[] = [
+  { name: 'Home', link: '/', exact: true },
+  { name: 'Blog', link: '/blog', exact: false },
+  { name: 'Portfolio', link: '/portfolio', exact: false },
+  { name: 'Contact', link: '/contact', exact: true },
+]
+
 const Navbar = () => {
   const pathname = usePathname()
-  const navLinks: NavLink[] = [
-    { name: 'Home', link: '/', exact: true },
-    { name: 'Blog', link: '/blog', exact: false },
-    { name: 'Portfolio', link: '/portfolio', exact: false },
-    { name: 'Contact', link: '/contact', exact: true },
-  ]
+
   return (
-    <nav className='navbar'>
+    <nav
+      role='navigation'
+      className='navbar'>
       <ul>
         <li className='nav-logo'>
           <Link href='/'>
@@ -22,7 +26,7 @@ const Navbar = () => {
           </Link>
         </li>
         {navLinks.map(navItem => {
-          const isActive: boolean = navItem.exact ? navItem.link === pathname : pathname.includes(navItem.link)
+          const isActive: boolean = navItem.exact ? navItem.link === pathname : pathname?.includes(navItem.link)
           return (
             <li
               key={navItem.name}

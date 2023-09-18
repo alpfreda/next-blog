@@ -7,7 +7,7 @@ const Header: React.FC = () => {
   const { classes } = useHeader()
 
   return (
-    <header className={classes}>
+    <header data-testid='header' className={classes}>
       <Navbar />
     </header>
   )

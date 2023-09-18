@@ -7,7 +7,7 @@ interface PostsListProps {
 
 const LastPosts: React.FC<PostsListProps> = ({ items }) => {
   return (
-    <section className='last-posts'>
+    <section data-testid='last-posts' className='last-posts'>
       <h3 className='l-title'>Latest Posts</h3>
       <div className='last-post-items'>
         {items.map(item => (
