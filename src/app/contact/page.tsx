@@ -1,13 +1,13 @@
 import ContactForm from '@/components/contact/contact-form'
 import ContactInfo from '@/components/contact/contact-info'
 import HeaderTitle from '@/components/header-title'
-import { URLS } from '@/constants/urls'
+import { META_TAGS, URLS } from '@/constants/consent'
 import { MetaTag } from '@/interfaces/meta-tag.interface'
 import axios from 'axios'
 import { Metadata } from 'next'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const metaTagResponse = await axios.get<MetaTag>(`${process.env.API_URL}/${URLS.META_TAGS}/contact`)
+  const metaTagResponse = await axios.get<MetaTag>(`${process.env.API_URL}/${URLS.META_TAGS}/${META_TAGS.CONTACT}`)
 
   return {
     title: metaTagResponse.data.title,

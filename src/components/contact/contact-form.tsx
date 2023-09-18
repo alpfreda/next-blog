@@ -1,11 +1,9 @@
 'use client'
 
-import { Lato } from 'next/font/google'
 import { useContactForm } from './contact-form-hook'
-const lato = Lato({ subsets: ['latin'], weight: ['100', '300', '400', '700', '900'] })
 
 const ContactForm: React.FC = (): JSX.Element => {
-  const { isLoading, alert, message, setMessage, onSubmit } = useContactForm()
+  const { isLoading, message, setMessage, onSubmit } = useContactForm()
 
   return (
     <form
@@ -16,8 +14,9 @@ const ContactForm: React.FC = (): JSX.Element => {
         <textarea
           name='message'
           value={message}
+          maxLength={1000}
           onChange={e => setMessage(e.target.value)}
-          className={['form-control', lato.className].join(' ')}
+          className='form-control'
           placeholder='Write your message....'
           rows={3}
         />

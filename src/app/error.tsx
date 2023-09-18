@@ -1,11 +1,9 @@
 'use client'
 import Icon from '@/components/svg';
 
-// Error components must be Client Components
-
 export default function Error({ error, reset }: { error: Error; reset: () => void }) {
   return (
-    <section className='error'>
+    <section className='error-page'>
       <Icon
         name='error'
         size={100}

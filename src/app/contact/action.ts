@@ -1,6 +1,6 @@
 'use server'
 
-import { URLS } from '@/constants/urls'
+import { URLS } from '@/constants/consent'
 import axios from 'axios'
 
 export async function create(formData: FormData) {
