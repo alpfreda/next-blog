@@ -1,4 +1,4 @@
-$max-width: 68.75rem;
+$max-width: 60rem;
 $border-radius: 1.125rem;
 $font-family: 'Lato', sans-serif;
 
@@ -17,6 +17,14 @@ $secondary-color-dark: #a6a3a3;
 $primary-bg-color: #ddd;
 $primary-bg-color-dark: #141414;
 
+$gradient-start-color: #833ab4;
+$gradient-middle-color: #fd1d1d;
+$gradient-end-color: #fcb045;
+
+$gradient-start-color-dark: #a7cfdf;
+$gradient-middle-color-dark: #9ea5ff;
+$gradient-end-color-dark: #23538a;
+
 :root {
   --primary-color: #{$primary-color};
   --secondary-color: #{$secondary-color};
@@ -26,7 +34,12 @@ $primary-bg-color-dark: #141414;
 
   --primary-bg-color: #{$primary-bg-color};
 
-  --intro-avatar-size: 6rem;
+  --header-nav-item-color: #{$secondary-color};
+  --header-nav-item-active-color: #{$primary-color};
+
+  --header-bg-color: #f5f5f5;
+
+  --intro-avatar-size: 9rem;
   --intro-title-max-width: 38rem;
 
   --intro-title-start-color: #333;
@@ -38,9 +51,22 @@ $primary-bg-color-dark: #141414;
   --last-post-item-summary-color: #666;
 
   --blog-item-background: #fff;
+  --blog-header-color: #{$secondary-color};
+  --blog-item-summary-color: #333;
+
+  --blog-detail-meta-border-color: #ccc;
+  --blog-detail-meta-color: #555;
+
+  --portfolio-item-background: #fff;
+  --portfolio-item-technologies-color: #333;
+  --portfolio-btn-color: #333;
+  --portfolio-btn-bg-color: #eee;
+  --portfolio-btn-hover-color: #333;
+  --portfolio-btn-hover-bg-color: #ccc;
+  --portfolio-btn-icon-color: #333;
 
   --contact-header-color: #333;
-  --contact-sub-header-color: #777;
+  --sub-header-color: #777;
   --contact-info-color: #777;
   --contact-info-icon-color: #333;
   --contact-info-link-color: #000;
@@ -48,9 +74,26 @@ $primary-bg-color-dark: #141414;
   --form-control-bg-color: #{lighten($primary-bg-color, 20%)};
   --form-control-border-color: #{$primary-bg-color};
   --form-control-color: #{$primary-color};
-  --form-label-color: #{$secondary-color};
+  --form-label-color: #{$primary-color};
 
   --footer-icon-color: #{$primary-color};
+
+  --gradient-start-color: #{$gradient-start-color};
+  --gradient-middle-color: #{$gradient-middle-color};
+  --gradient-end-color: #{$gradient-end-color};
+
+  --btn-color: #fff;
+  --btn-bg-color: #333;
+  --btn-border-color: #333;
+  --btn-hover-color: #ccc;
+  --btn-hover-bg-color: #000;
+  --btn-hover-border-color: #000;
+
+  --notification-item-bg-color: #ccc;
+  --notification-item-bg-hover-color: #c1c1c1;
+  --notification-item-color: #333;
+  --notification-item-close-color: #000;
+  --notification-item-content-color: #666;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -62,6 +105,11 @@ $primary-bg-color-dark: #141414;
     --background-end-color: #{$background-end-color-dark};
 
     --primary-bg-color: #{$primary-bg-color-dark};
+
+    --header-bg-color: #0a0908;
+
+    --header-nav-item-color: #{$secondary-color-dark};
+    --header-nav-item-active-color: #{$primary-color-dark};
 
     --intro-title-start-color: #eee;
     --intro-title-middle-color: #ddd;
@@ -75,8 +123,19 @@ $primary-bg-color-dark: #141414;
     --blog-header-color: #{$secondary-color-dark};
     --blog-item-summary-color: #aaa;
 
+    --blog-detail-meta-border-color: #2f2f2f;
+    --blog-detail-meta-color: #999;
+
+    --portfolio-item-background: #{$primary-bg-color-dark};
+    --portfolio-item-technologies-color: #aaa;
+    --portfolio-btn-color: #ccc;
+    --portfolio-btn-bg-color: #222222;
+    --portfolio-btn-hover-color: #fff;
+    --portfolio-btn-hover-bg-color: #333;
+    --portfolio-btn-icon-color: #fff;
+
     --contact-header-color: #fff;
-    --contact-sub-header-color: #a6a3a3;
+    --sub-header-color: #a6a3a3;
     --contact-info-color: #a6a3a3;
     --contact-info-icon-color: #fff;
     --contact-info-link-color: #fff;
@@ -84,8 +143,25 @@ $primary-bg-color-dark: #141414;
     --form-control-bg-color: #{$primary-bg-color-dark};
     --form-control-border-color: #{lighten($primary-bg-color-dark, 20%)};
     --form-control-color: #{$primary-color-dark};
-    --form-label-color: #{$secondary-color-dark};
+    --form-label-color: #{$primary-color-dark};
 
     --footer-icon-color: #{$primary-color-dark};
+
+    --gradient-start-color: #{$gradient-start-color-dark};
+    --gradient-middle-color: #{$gradient-middle-color-dark};
+    --gradient-end-color: #{$gradient-end-color-dark};
+
+    --btn-color: #333;
+    --btn-bg-color: #fff;
+    --btn-border-color: #fff;
+    --btn-hover-color: #000;
+    --btn-hover-bg-color: #ccc;
+    --btn-hover-border-color: #ccc;
+
+    --notification-item-bg-color: #0e141a;
+    --notification-item-bg-hover-color: #121e2a;
+    --notification-item-color: #e1e1e1;
+    --notification-item-close-color: #fff;
+    --notification-item-content-color: #999;
   }
 }

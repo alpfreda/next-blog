@@ -4,6 +4,7 @@ const Jest: React.FC<Icon> = ({ size = 20 }) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='-13.5 0 283 283'
+    role='img'
     width={size}
     height={size}>
     <path

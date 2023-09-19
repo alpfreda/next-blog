@@ -1,6 +1,6 @@
+import HeaderTitle from '@/components/common/header-title'
 import ContactForm from '@/components/contact/contact-form'
 import ContactInfo from '@/components/contact/contact-info'
-import HeaderTitle from '@/components/header-title'
 import { META_TAGS, URLS } from '@/constants/consent'
 import { MetaTag } from '@/interfaces/meta-tag.interface'
 import axios from 'axios'

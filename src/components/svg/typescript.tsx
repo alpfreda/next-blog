@@ -1,10 +1,11 @@
-import { Icon } from "@/interfaces/icon.interface"
+import { Icon } from '@/interfaces/icon.interface'
 
 const Typescript: React.FC<Icon> = ({ size = 20 }) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 26 26'
     fill='#ffeb3b'
+    role='img'
     width={size}
     height={size}>
     <path

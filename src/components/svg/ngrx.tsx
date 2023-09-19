@@ -4,6 +4,7 @@ const Ngrx: React.FC<Icon> = ({ size = 20 }) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='44 11 911.963 978.148'
+    role='img'
     width={size}
     height={size}>
     <g

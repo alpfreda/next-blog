@@ -4,7 +4,7 @@ import { ContactInfo } from '@/interfaces/contact-info.interface'
 import Icon from '../svg'
 
 interface ContactInfoProps {
-  contactInfo: ContactInfo
+  contactInfo?: ContactInfo
 }
 
 const ContactInfo: React.FC<ContactInfoProps> = ({ contactInfo }): JSX.Element => {

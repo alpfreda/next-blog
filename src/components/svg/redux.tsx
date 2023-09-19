@@ -4,6 +4,7 @@ const Redux: React.FC<Icon> = ({ size = 20 }) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 90 90'
+    role='img'
     width={size}
     height={size}>
     <g fill='#764ABC'>

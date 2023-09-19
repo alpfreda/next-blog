@@ -6,6 +6,7 @@ const MaterialUi: React.FC<Icon> = ({ size = 20 }) => (
     viewBox='0 0 36 32'
     fill='none'
     className='css-1170n61'
+    role='img'
     width={size}
     height={size}>
     <path

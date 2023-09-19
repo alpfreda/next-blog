@@ -1,5 +1,5 @@
 import Posts from '@/components/blog/posts-list'
-import HeaderTitle from '@/components/header-title'
+import HeaderTitle from '@/components/common/header-title'
 import { META_TAGS, URLS } from '@/constants/consent'
 import { MetaTag } from '@/interfaces/meta-tag.interface'
 import { Post } from '@/interfaces/post.interface'

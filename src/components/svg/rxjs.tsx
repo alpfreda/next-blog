@@ -4,6 +4,7 @@ const Rxjs: React.FC<Icon> = ({ size = 20 }) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='12.1 8.4 262.8 272.2'
+    role='img'
     width={size}
     height={size}>
     <linearGradient

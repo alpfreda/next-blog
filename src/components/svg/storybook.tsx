@@ -6,6 +6,7 @@ const Storybook: React.FC<Icon> = ({ size = 20 }) => (
     fill='#db235f'
     stroke='#db235f'
     viewBox='-2.4 -2.4 28.8 28.8'
+    role='img'
     width={size}
     height={size}>
     <title>{'Storybook icon'}</title>

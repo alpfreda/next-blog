@@ -1,0 +1,38 @@
+@mixin flexbox($direction: row, $alignItems: null, $justifyContent: null, $wrap: nowrap, $shrink: null, $grow: null, $justifyItems: null) {
+  display: flex;
+  flex-direction: $direction;
+
+  @if $justifyContent !=null {
+    justify-content: $justifyContent;
+  }
+
+  @if $alignItems !=null {
+    align-items: $alignItems;
+  }
+
+  @if $wrap !=null {
+    flex-wrap: $wrap;
+  }
+
+  @if $shrink !=null {
+    flex-shrink: $shrink;
+  }
+
+  @if $grow !=null {
+    flex-grow: $grow;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin gradient-text($start, $middle, $end) {
+  background-image: linear-gradient(to right, $start, $middle, $end);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}

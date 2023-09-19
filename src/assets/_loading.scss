@@ -1,0 +1,23 @@
+.fixed-loading {
+  @include flexbox(column, center, center);
+  min-height: 50vh;
+}
+
+.btn-loading {
+  margin-right: 0.5rem;
+}
+
+.loading-circle-one {
+  opacity: 0;
+  animation: fade-in-out 1s linear infinite 100ms;
+}
+
+.loading-circle-two {
+  opacity: 0;
+  animation: fade-in-out 1s linear infinite 300ms;
+}
+
+.loading-circle-three {
+  opacity: 0;
+  animation: fade-in-out 1s linear infinite 500ms;
+}

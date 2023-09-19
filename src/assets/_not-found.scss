@@ -2,7 +2,7 @@
   @include flexbox(column, center, center);
   margin-top: 5rem;
   opacity: 0;
-  animation: fadeInTop 0.5s cubic-bezier(.14, .18, .16, 1.02) forwards;
+  animation: fadeInTop 0.5s cubic-bezier(0.14, 0.18, 0.16, 1.02) forwards;
   animation-delay: 0.5s;
 
   .emoji {

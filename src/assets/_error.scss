@@ -1,0 +1,32 @@
+.error-page {
+  @include flexbox(column, center, center);
+  margin-top: 5rem;
+  opacity: 0;
+  animation: fadeInTop 0.5s cubic-bezier(0.14, 0.18, 0.16, 1.02) forwards;
+  animation-delay: 0.5s;
+  margin-bottom: 3rem;
+
+  .title {
+    font-size: 1.5rem;
+    margin: 1rem 0 1.5rem;
+    @include for-tablet-portrait-up {
+      font-size: 2.5rem;
+    }
+  }
+
+  .description {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    max-width: 35rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    @include for-tablet-portrait-up {
+      font-size: 1.5rem;
+    }
+  }
+
+  .btn {
+    width: auto;
+    margin-top: 1rem;
+  }
+}

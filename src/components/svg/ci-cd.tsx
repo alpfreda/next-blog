@@ -5,6 +5,7 @@ const CiCd: React.FC<Icon> = ({ size = 20 }) => (
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 36 36'
     fill='#ccc'
+    role='img'
     width={size}
     height={size}>
     <path

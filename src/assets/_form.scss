@@ -1,0 +1,78 @@
+.btn {
+  border: 0;
+  border-radius: 2rem;
+  color: var(--btn-color);
+  font-size: 1.2rem;
+  background: var(--btn-bg-color);
+  border: 2px solid var(--btn-border-color);
+  cursor: pointer;
+  outline: 0;
+  width: 100%;
+  float: none;
+  padding: 0.75rem 2rem;
+  transition: all 0.2s linear 0s;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background: var(--btn-hover-bg-color);
+    border-color: var(--btn-hover-border-color);
+    color: var(--btn-hover-color);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.alert {
+  @include flexbox(row, center, flex-start);
+  gap: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #eee;
+
+  &.danger {
+    color: #f44336;
+  }
+
+  &.success {
+    color: #ffc107;
+  }
+}
+
+.form-group {
+  @include flexbox(column);
+  font-size: 1.1rem;
+
+  .form-label {
+    color: var(--form-label-color);
+    font-size: 1.35rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+  }
+
+  .form-control {
+    border: 2px solid var(--form-control-border-color);
+    background: var(--form-control-bg-color);
+    color: var(--form-control-color);
+    font-family: inherit;
+    outline: 0;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    transition:
+      border 0.2s linear 0s,
+      box-shadow 0.2s linear 0s;
+
+    &:focus,
+    &:active {
+      border-color: rgba(33, 150, 243, 1);
+      box-shadow:
+        0 1px 1px rgba(0, 0, 0, 0.075) inset,
+        0 0 8px rgba(33, 150, 243, 0.5);
+    }
+  }
+}

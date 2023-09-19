@@ -1,7 +1,7 @@
 import PostDetail from '@/components/blog/post-detail'
 import PostDetailForm from '@/components/blog/post-detail-form'
 import PostMeta from '@/components/blog/post-meta'
-import HeaderTitle from '@/components/header-title'
+import HeaderTitle from '@/components/common/header-title'
 import { META_TAGS, URLS } from '@/constants/consent'
 import { MetaTag } from '@/interfaces/meta-tag.interface'
 import { Post } from '@/interfaces/post.interface'

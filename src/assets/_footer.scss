@@ -1,7 +1,7 @@
 footer {
   @include flexbox(row, center, center);
   position: static;
-  margin-bottom: 1rem;
+  margin: 2rem 0;
   gap: 0.5rem;
   text-align: center;
   color: #999;

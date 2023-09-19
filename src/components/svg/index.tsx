@@ -4,7 +4,15 @@ export interface IconProps {
 }
 
 const Icon = ({ name, size }: IconProps) => {
-  const SpecificStory = require(`./${name}`).default
+  let SpecificStory
+
+  try {
+    SpecificStory = require(`./${name}`).default
+  } catch (error) {
+    console.error(`Error loading icon component "${name}":`, error)
+    return null
+  }
+
   return (
     <SpecificStory
       role='icon'

@@ -1,4 +1,4 @@
-import { Icon } from "@/interfaces/icon.interface"
+import { Icon } from '@/interfaces/icon.interface'
 
 const Heart: React.FC<Icon> = ({ size = 20 }) => (
   <svg

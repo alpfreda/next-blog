@@ -1,0 +1,96 @@
+.portfolio {
+  margin: 1rem 0;
+
+  @include for-tablet-portrait-up {
+    margin: 1rem 0 3rem;
+  }
+
+  .header-title {
+    margin-bottom: 1rem;
+  }
+
+  .portfolio-items {
+    @include flexbox($wrap: wrap);
+    gap: 1rem;
+    opacity: 0;
+    animation: fadeIn 0.5s cubic-bezier(0.14, 0.18, 0.16, 1.02) forwards;
+    animation-delay: 0.4s;
+
+    .portfolio-item {
+      @include flexbox(column);
+      background: var(--portfolio-item-background);
+      padding: 1.5rem;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      border-radius: 1.125rem;
+      box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
+
+      @include for-tablet-portrait-up {
+        padding: 1.5rem;
+        width: calc((100% / 3) - 1rem + (1rem / 3));
+      }
+
+      &:hover {
+        transform: scale(1.015);
+      }
+
+      .title {
+        font-size: 1.15rem;
+        margin-bottom: 1rem;
+
+        @include for-tablet-portrait-up {
+          font-size: 1.35rem;
+        }
+      }
+
+      .portfolio-item-technologies {
+        @include flexbox($wrap: wrap);
+        margin-bottom: 2rem;
+        gap: 0.5rem;
+        font-size: 1rem;
+        color: var(--portfolio-item-technologies-color);
+
+        .technology-item {
+          @include flexbox(row, center, center);
+
+          svg {
+            margin-right: 0.35rem;
+          }
+        }
+      }
+
+      .portfolio-item-action {
+        @include flexbox(row, center, center);
+        margin-top: auto;
+        gap: 1rem;
+
+        .btn {
+          @include flexbox(row, center, center);
+          font-size: 1rem;
+          padding: 0.5rem 1rem;
+          background: var(--portfolio-btn-bg-color);
+          color: var(--portfolio-btn-color);
+          border-color: var(--portfolio-btn-bg-color);
+          width: 50%;
+
+          &:hover {
+            background: var(--portfolio-btn-hover-bg-color);
+            border-color: var(--portfolio-btn-hover-bg-color);
+            color: var(--portfolio-btn-hover-color);
+          }
+        }
+
+        svg {
+          margin-right: 0.5rem;
+          fill: var(--portfolio-btn-icon-color);
+
+          path {
+            fill: var(--portfolio-btn-icon-color) !important;
+          }
+        }
+      }
+    }
+  }
+}

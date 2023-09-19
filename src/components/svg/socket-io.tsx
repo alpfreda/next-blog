@@ -6,6 +6,7 @@ const SocketIo: React.FC<Icon> = ({ size = 20 }) => (
     fill='#fff'
     xmlns='http://www.w3.org/2000/svg'
     preserveAspectRatio='xMinYMin meet'
+    role='img'
     width={size}
     height={size}>
     <circle

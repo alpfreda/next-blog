@@ -2,6 +2,7 @@ import { Icon } from '@/interfaces/icon.interface'
 
 const Next: React.FC<Icon> = ({ size = 20 }) => (
   <svg
+    role='img'
     width={size}
     height={size}
     viewBox='0 0 256 256'

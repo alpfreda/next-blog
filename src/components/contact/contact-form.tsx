@@ -7,6 +7,7 @@ const ContactForm: React.FC = (): JSX.Element => {
 
   return (
     <form
+      role='form'
       className='contact-form'
       action={onSubmit}>
       <div className='form-group'>

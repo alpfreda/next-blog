@@ -2,6 +2,7 @@ import { Icon } from '@/interfaces/icon.interface'
 
 const Share: React.FC<Icon> = ({ size = 24 }) => (
   <svg
+    role='img'
     width={size}
     height={size}
     viewBox='0 0 24 24'

@@ -1,0 +1,132 @@
+.intro {
+  margin: 1rem 0;
+
+  .avatar,
+  .name,
+  .title {
+    opacity: 0;
+    animation: fadeInTop 0.5s cubic-bezier(0.14, 0.18, 0.16, 1.02) forwards;
+  }
+
+  .avatar {
+    width: var(--intro-avatar-size);
+    height: var(--intro-avatar-size);
+    border-radius: 5cap;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+
+    img {
+      border-radius: 50%;
+      height: 100%;
+    }
+  }
+
+  .name {
+    @include gradient-text(#833ab4, #fd1d1d, #fcb045);
+
+    @media (prefers-color-scheme: dark) {
+      @include gradient-text(#a7cfdf, #9ea5ff, #23538a);
+    }
+
+    animation-delay: 0.28s;
+    font-size: 1.65rem;
+    margin-bottom: 0.5rem;
+
+    @include for-tablet-portrait-up {
+      font-size: 1.85rem;
+      display: inline-block;
+    }
+  }
+
+  .title {
+    color: var(--intro-title-start-color);
+    @include gradient-text(var(--intro-title-start-color), var(--intro-title-middle-color), var(--intro-title-end-color));
+    max-width: var(--intro-title-max-width);
+    font-weight: 300;
+    animation-delay: 0.38s;
+    font-size: 1.45rem;
+
+    @include for-tablet-portrait-up {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.last-posts {
+  margin: 5rem 0 1rem;
+
+  @include for-tablet-portrait-up {
+    margin: 5rem 0 5rem;
+  }
+
+  .l-title {
+    color: var(--last-posts-header-color);
+    font-size: 1.35rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeIn 0.5s cubic-bezier(0.14, 0.18, 0.16, 1.02) forwards;
+    animation-delay: 0.7s;
+    text-align: left;
+
+    @include for-tablet-portrait-up {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .last-post-items {
+    @include flexbox($wrap: wrap);
+    gap: 2rem;
+    opacity: 0;
+    animation: fadeIn 0.5s cubic-bezier(0.14, 0.18, 0.16, 1.02) forwards;
+    animation-delay: 0.9s;
+
+    .last-post-item {
+      @include flexbox(column);
+      background: var(--last-post-item-background);
+      cursor: pointer;
+      width: 100%;
+      padding: 1.5rem;
+      position: relative;
+      overflow: hidden;
+      border-radius: 1.125rem;
+      box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s cubic-bezier(0, 0, 0.5, 1);
+
+      @include for-tablet-portrait-up {
+        padding: 2.5rem;
+        width: calc((100% / 2) - 2rem + (2rem / 2));
+      }
+
+      &:hover {
+        transform: scale(1.015);
+      }
+
+      .title {
+        font-size: 1.35rem;
+        margin-bottom: 1rem;
+
+        @include for-tablet-portrait-up {
+          font-size: 1.5rem;
+        }
+      }
+
+      .summary {
+        color: var(--last-post-item-summary-color);
+        font-size: 1.15rem;
+        font-weight: 300;
+        margin-bottom: 1.5rem;
+
+        @include for-tablet-portrait-up {
+          font-size: 1.25rem;
+        }
+      }
+
+      .img-box {
+        text-align: center;
+        margin-top: auto;
+      }
+    }
+  }
+}

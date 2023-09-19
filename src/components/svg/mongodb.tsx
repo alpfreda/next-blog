@@ -4,6 +4,7 @@ const Mongodb: React.FC<Icon> = ({ size = 20 }) => (
   <svg
     viewBox='8.738 2 20 33'
     xmlns='http://www.w3.org/2000/svg'
+    role='img'
     width={size}
     height={size}>
     <path

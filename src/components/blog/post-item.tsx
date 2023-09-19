@@ -10,6 +10,7 @@ interface PostItemProps {
 const PostItem: React.FC<PostItemProps> = ({ item }) => {
   return (
     <Link
+      data-testid='post-item'
       href={`/${URLS.BLOG}/${item.slug}`}
       className='blog-item'>
       <h4 className='title'>{item.title}</h4>

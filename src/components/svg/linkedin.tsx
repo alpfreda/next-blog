@@ -1,10 +1,11 @@
-import { Icon } from "@/interfaces/icon.interface"
+import { Icon } from '@/interfaces/icon.interface'
 
 const Linkedin: React.FC<Icon> = ({ size = 20 }) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     xmlnsXlink='http://www.w3.org/1999/xlink'
     version='1.1'
+    role='img'
     width={size}
     height={size}
     viewBox='0 0 256 256'
