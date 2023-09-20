@@ -7,6 +7,7 @@ import type { Metadata } from 'next'
 import { Lato } from 'next/font/google'
 import '../assets/main.scss'
 
+export const dynamic = 'force-dynamic' // Next.js bug for dynamic and local requests -> https://nextjs.org/docs/app/building-your-application/deploying/static-exports#unsupported-features
 const lato = Lato({ subsets: ['latin'], weight: ['100', '300', '400', '700', '900'] })
 
 export const metadata: Metadata = {

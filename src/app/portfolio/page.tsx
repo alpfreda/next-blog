@@ -3,28 +3,30 @@ import PortfolioList from '@/components/portfolio/portfolios-list'
 import { META_TAGS, URLS } from '@/constants/consent'
 import { MetaTag } from '@/interfaces/meta-tag.interface'
 import { Portfolio } from '@/interfaces/portfolio.interface'
-import axios from 'axios'
+import { getData } from '@/utils/next-axios'
 import { Metadata } from 'next'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const metaTagResponse = await axios.get<MetaTag>(`${process.env.API_URL}/${URLS.META_TAGS}/${META_TAGS.PORTFOLIO}`)
+  const metaTag = await getData<MetaTag>(`${URLS.META_TAGS}/${META_TAGS.PORTFOLIO}`)
 
   return {
-    title: metaTagResponse.data.title,
-    description: metaTagResponse.data.description,
-    keywords: metaTagResponse.data.keywords,
+    title: metaTag.title,
+    description: metaTag.description,
+    keywords: metaTag.keywords,
   }
 }
 
+
 const Portfolio: React.FC = async () => {
-  const portfolioResponse = await axios.get<Portfolio[]>(`${process.env.API_URL}/${URLS.PORTFOLIO}`)
-  const portfolio: Portfolio[] = portfolioResponse.data.sort((a, b) => a.order - b.order)
+  const portfolios = await getData<Portfolio[]>(URLS.PORTFOLIO)
+
+  const sortedPortfolios = portfolios.sort((a, b) => a.order - b.order)
 
   return (
     <section className='portfolio'>
       <HeaderTitle title='Portfolio' />
       <h3 className='header-sub-title'>Check out my pets projects</h3>
-      <PortfolioList items={portfolio} />
+      <PortfolioList items={sortedPortfolios} />
     </section>
   )
 }

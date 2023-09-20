@@ -3,22 +3,21 @@ import ContactForm from '@/components/contact/contact-form'
 import ContactInfo from '@/components/contact/contact-info'
 import { META_TAGS, URLS } from '@/constants/consent'
 import { MetaTag } from '@/interfaces/meta-tag.interface'
-import axios from 'axios'
+import { getData } from '@/utils/next-axios'
 import { Metadata } from 'next'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const metaTagResponse = await axios.get<MetaTag>(`${process.env.API_URL}/${URLS.META_TAGS}/${META_TAGS.CONTACT}`)
+  const metaTag = await getData<MetaTag>(`${URLS.META_TAGS}/${META_TAGS.CONTACT}`)
 
   return {
-    title: metaTagResponse.data.title,
-    description: metaTagResponse.data.description,
-    keywords: metaTagResponse.data.keywords,
+    title: metaTag.title,
+    description: metaTag.description,
+    keywords: metaTag.keywords,
   }
 }
 
 const Contact: React.FC = async () => {
-  const contactInfoResponse = await axios.get<ContactInfo>(`${process.env.API_URL}/${URLS.CONTACT_INFO}`)
-  const contactInfo = contactInfoResponse.data
+  const contactInfo = await getData<ContactInfo>(URLS.CONTACT_INFO)
 
   return (
     <section className='contact'>
