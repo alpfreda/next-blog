@@ -5,6 +5,8 @@ const nextConfig = {
   },
   experimental: {
     serverActions: true,
+    appDir: true,
+    esmExternals: 'loose'
   },
   pageExtensions: ['mdx', 'md', 'jsx', 'js', 'tsx', 'ts'],
   webpack: config => {
