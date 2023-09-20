@@ -1,6 +1,8 @@
 'use client'
 
-import MarkdownPreview from '@uiw/react-markdown-preview'
+import MarkdownPreview from '@uiw/react-markdown-preview/esm';
+
+import React from 'react';
 
 interface PostDetailProps {
   content: string
