@@ -4,9 +4,7 @@ const nextConfig = {
     domains: ['firebasestorage.googleapis.com'],
   },
   experimental: {
-    serverActions: true,
-    appDir: true,
-    esmExternals: 'loose'
+    serverActions: true
   },
   pageExtensions: ['mdx', 'md', 'jsx', 'js', 'tsx', 'ts'],
   webpack: config => {
