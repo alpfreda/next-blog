@@ -37,7 +37,7 @@
   }
 
   .contact-info {
-    @include flexbox(column, start, start, $wrap: wrap);
+    @include flexbox(column, flex-start, flex-start, $wrap: wrap);
     margin: 2rem 0;
     gap: 1rem;
 
