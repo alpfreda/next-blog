@@ -1,6 +1,6 @@
 'use client'
 
-import MarkdownPreview from '@uiw/react-markdown-preview/esm';
+import MarkdownPreview from '@uiw/react-markdown-preview';
 
 import React from 'react';
 
