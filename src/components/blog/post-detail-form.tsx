@@ -1,5 +1,6 @@
 'use client'
 
+import Button from '../common/button'
 import { usePostDetailForm } from './post-detail-form-hook'
 
 const PostDetailForm: React.FC = (): JSX.Element => {
@@ -22,11 +23,11 @@ const PostDetailForm: React.FC = (): JSX.Element => {
           rows={3}
         />
       </div>
-      <button
-        disabled={isLoading}
-        className='btn'>
+      <Button
+        onClick={onSubmit}
+        isLoading={isLoading}>
         Submit
-      </button>
+      </Button>
     </form>
   )
 }

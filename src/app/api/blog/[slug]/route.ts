@@ -16,10 +16,10 @@ async function getPostViewByIp(postId: string, ip: string) {
 }
 
 async function addPostView(post: Post, ip: string = '127.0.0.1') {
-  const getView = await getPostViewByIp(post.id, ip)
+  const getView = await getPostViewByIp(post.id ?? '', ip)
   if (!getView) {
     await add(DB.POST_VIEWS, { postId: post.id, ip })
-    await update(DB.POSTS, post.id, { ...post, view: post.view + 1 })
+    await update(DB.POSTS, post.id ?? '', { ...post, view: post.view + 1 })
   }
 }
 

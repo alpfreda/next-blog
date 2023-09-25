@@ -1,7 +1,7 @@
 import { DB } from '@/constants/consent'
 import { handleErrorResponse } from '@/utils/error-response'
+import { get } from '@/utils/firebase'
 import { NextResponse } from 'next/server'
-import { get } from '../../../utils/firebase'
 
 export async function GET() {
   try {

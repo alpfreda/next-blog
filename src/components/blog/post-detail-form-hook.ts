@@ -1,5 +1,6 @@
-import { create } from '@/app/contact/action'
+import { URLS } from '@/constants/consent'
 import { NotificationItem } from '@/interfaces/notification-item.interface'
+import { postReq } from '@/utils/next-axios'
 import { Dispatch, SetStateAction, useState } from 'react'
 import { ActionTypes, useNotifications } from '../notifications/notification-context'
 
@@ -7,7 +8,7 @@ const usePostDetailForm = (): {
   comment: string
   isLoading: boolean
   setComment: Dispatch<SetStateAction<string>>
-  onSubmit: (formData: FormData) => Promise<void>
+  onSubmit: () => Promise<void>
 } => {
   const { dispatch } = useNotifications()
 
@@ -18,21 +19,21 @@ const usePostDetailForm = (): {
     dispatch({ type: ActionTypes.ADD_NOTIFICATION, payload: notification })
   }
 
-  async function onSubmit(formData: FormData) {
-    if (!formData.get('comment')) {
+  async function onSubmit() {
+    if (!comment) {
       addNotification({
-        id: 'BLOG_FILL_MESSAGE',
-        message: 'Please fill the message',
+        id: 'BLOG_FILL_COMMENT',
+        message: 'Please fill the comment',
         type: 'ERROR',
       })
     } else {
+      setIsLoading(true)
       try {
-        setIsLoading(true)
-        await create(formData)
+        await postReq(URLS.BLOG_COMMENT, { comment })
         setComment('')
         addNotification({
           id: 'BLOG_SUCCESS_MESSAGE',
-          message: 'Thanks 👋 It will be a pleasure to contact you',
+          message: 'Thanks 👋 Your comment successfully created.',
           type: 'SUCCESS',
         })
       } catch (e) {

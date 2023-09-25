@@ -5,12 +5,12 @@ import HeaderTitle from '@/components/common/header-title'
 import { META_TAGS, URLS } from '@/constants/consent'
 import { MetaTag } from '@/interfaces/meta-tag.interface'
 import { Post } from '@/interfaces/post.interface'
-import { getData } from '@/utils/next-axios'
+import { getReq } from '@/utils/next-axios'
 import { Metadata } from 'next'
 import Image from 'next/image'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const metaTag = await getData<MetaTag>(`${URLS.META_TAGS}/${META_TAGS.BLOG_DETAIL}`)
+  const metaTag = await getReq<MetaTag>(`${URLS.META_TAGS}/${META_TAGS.BLOG_DETAIL}`)
 
   return {
     title: metaTag.title,
@@ -20,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const BlogInfo = async ({ params }: { params: { slug: string } }) => {
-  const post = await getData<Post>(`${URLS.BLOG}/${params.slug}`)
+  const post = await getReq<Post>(`${URLS.BLOG}/${params.slug}`)
 
   let content = ''
 

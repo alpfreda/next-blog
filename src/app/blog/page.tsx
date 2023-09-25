@@ -3,11 +3,11 @@ import HeaderTitle from '@/components/common/header-title'
 import { META_TAGS, URLS } from '@/constants/consent'
 import { MetaTag } from '@/interfaces/meta-tag.interface'
 import { Post } from '@/interfaces/post.interface'
-import { getData } from '@/utils/next-axios'
+import { getReq } from '@/utils/next-axios'
 import { Metadata } from 'next'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const metaTag = await getData<MetaTag>(`${URLS.META_TAGS}/${META_TAGS.BLOG}`)
+  const metaTag = await getReq<MetaTag>(`${URLS.META_TAGS}/${META_TAGS.BLOG}`)
 
   return {
     title: metaTag.title,
@@ -17,7 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const Blog: React.FC = async () => {
-  const posts = await getData<Post[]>(URLS.BLOG)
+  const posts = await getReq<Post[]>(URLS.BLOG)
 
   return (
     <section className='blog'>

@@ -11,11 +11,11 @@ async function getPostLikesByIp(postId: string, ip: string) {
 }
 
 async function addPostView(post: Post, ip: string = '127.0.0.1') {
-  const getView = await getPostLikesByIp(post.id, ip)
+  const getView = await getPostLikesByIp(post.id ?? '', ip)
   if (!getView) {
     post.like += 1
     await add(DB.POST_LIKES, { postId: post.id, ip })
-    await update(DB.POSTS, post.id, { ...post, like: post.like })
+    await update(DB.POSTS, post.id ?? '', { ...post, like: post.like })
   }
   return post
 }

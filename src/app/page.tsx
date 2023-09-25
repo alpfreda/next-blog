@@ -4,25 +4,21 @@ import { META_TAGS, URLS } from '@/constants/consent'
 import { Intro } from '@/interfaces/intro.interface'
 import { MetaTag } from '@/interfaces/meta-tag.interface'
 import { Post } from '@/interfaces/post.interface'
-import axios from 'axios'
+import { getReq } from '@/utils/next-axios'
 import { Metadata } from 'next'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const metaTagResponse = await axios.get<MetaTag>(`${process.env.API_URL}/${URLS.META_TAGS}/${META_TAGS.HOME}`)
-
+  const metaTag = await getReq<MetaTag>(`${URLS.META_TAGS}/${META_TAGS.HOME}`)
   return {
-    title: metaTagResponse.data.title,
-    description: metaTagResponse.data.description,
-    keywords: metaTagResponse.data.keywords,
+    title: metaTag.title,
+    description: metaTag.description,
+    keywords: metaTag.keywords,
   }
 }
 
 export default async function Page() {
-  const introResponse = await axios.get<Intro>(`${process.env.API_URL}/${URLS.INTRO}`)
-  const intro = introResponse.data
-
-  const lastPostsResponse = await axios.get<Post[]>(`${process.env.API_URL}/${URLS.LAST_POSTS}`)
-  const posts = lastPostsResponse.data
+  const intro = await getReq<Intro>(URLS.INTRO)
+  const posts = await getReq<Post[]>(URLS.LAST_POSTS)
 
   return (
     <>

@@ -1,5 +1,5 @@
 'use client'
-import Icon from '@/components/svg'
+import Icon from '@/components/svg';
 
 export default function Error({ error, reset }: { error: Error; reset: () => void }) {
   return (

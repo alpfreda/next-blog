@@ -1,15 +1,15 @@
 'use client'
 
+import Button from '../common/button'
 import { useContactForm } from './contact-form-hook'
 
 const ContactForm: React.FC = (): JSX.Element => {
   const { isLoading, message, setMessage, onSubmit } = useContactForm()
 
   return (
-    <form
+    <div
       role='form'
-      className='contact-form'
-      action={onSubmit}>
+      className='contact-form'>
       <div className='form-group'>
         <label className='form-label'>Send Message</label>
         <textarea
@@ -22,12 +22,12 @@ const ContactForm: React.FC = (): JSX.Element => {
           rows={3}
         />
       </div>
-      <button
-        disabled={isLoading}
-        className='btn'>
+      <Button
+        onClick={onSubmit}
+        isLoading={isLoading}>
         Submit
-      </button>
-    </form>
+      </Button>
+    </div>
   )
 }
 

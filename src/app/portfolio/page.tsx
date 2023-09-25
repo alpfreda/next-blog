@@ -3,11 +3,11 @@ import PortfolioList from '@/components/portfolio/portfolios-list'
 import { META_TAGS, URLS } from '@/constants/consent'
 import { MetaTag } from '@/interfaces/meta-tag.interface'
 import { Portfolio } from '@/interfaces/portfolio.interface'
-import { getData } from '@/utils/next-axios'
+import { getReq } from '@/utils/next-axios'
 import { Metadata } from 'next'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const metaTag = await getData<MetaTag>(`${URLS.META_TAGS}/${META_TAGS.PORTFOLIO}`)
+  const metaTag = await getReq<MetaTag>(`${URLS.META_TAGS}/${META_TAGS.PORTFOLIO}`)
 
   return {
     title: metaTag.title,
@@ -16,9 +16,8 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-
 const Portfolio: React.FC = async () => {
-  const portfolios = await getData<Portfolio[]>(URLS.PORTFOLIO)
+  const portfolios = await getReq<Portfolio[]>(URLS.PORTFOLIO)
 
   const sortedPortfolios = portfolios.sort((a, b) => a.order - b.order)
 

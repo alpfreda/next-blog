@@ -1,8 +1,8 @@
 import { DB } from '@/constants/consent'
 import { handleErrorResponse } from '@/utils/error-response'
+import { get } from '@/utils/firebase'
 import { Filter } from 'firebase-admin/firestore'
 import { NextRequest, NextResponse } from 'next/server'
-import { get } from '../../../../utils/firebase'
 
 async function getMetaTagByKey(key: string) {
   const filter: Filter[] = [Filter.where('key', '==', key)]

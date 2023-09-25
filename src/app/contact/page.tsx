@@ -3,11 +3,11 @@ import ContactForm from '@/components/contact/contact-form'
 import ContactInfo from '@/components/contact/contact-info'
 import { META_TAGS, URLS } from '@/constants/consent'
 import { MetaTag } from '@/interfaces/meta-tag.interface'
-import { getData } from '@/utils/next-axios'
+import { getReq } from '@/utils/next-axios'
 import { Metadata } from 'next'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const metaTag = await getData<MetaTag>(`${URLS.META_TAGS}/${META_TAGS.CONTACT}`)
+  const metaTag = await getReq<MetaTag>(`${URLS.META_TAGS}/${META_TAGS.CONTACT}`)
 
   return {
     title: metaTag.title,
@@ -17,7 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const Contact: React.FC = async () => {
-  const contactInfo = await getData<ContactInfo>(URLS.CONTACT_INFO)
+  const contactInfo = await getReq<ContactInfo>(URLS.CONTACT_INFO)
 
   return (
     <section className='contact'>

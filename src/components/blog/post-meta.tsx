@@ -1,8 +1,9 @@
 'use client'
 
-import { addLike } from '@/app/blog/[slug]/action'
+import { URLS } from '@/constants/consent'
 import { NotificationItem } from '@/interfaces/notification-item.interface'
 import { Post } from '@/interfaces/post.interface'
+import { postReq } from '@/utils/next-axios'
 import moment from 'moment'
 import { useEffect, useState } from 'react'
 import { ActionTypes, useNotifications } from '../notifications/notification-context'
@@ -27,7 +28,7 @@ const PostMeta: React.FC<PostMetaProps> = ({ post, className }) => {
 
   const onLike = async () => {
     if (post) {
-      const newPost = await addLike(post.id)
+      const newPost = await postReq(URLS.BLOG_LIKE, { postId: post.id })
       setInnerPost(newPost)
     }
   }
