@@ -100,3 +100,26 @@ export const update = async (collectionName: string, id: string, body: any) => {
     throw err
   }
 }
+
+export const createDB = async (collectionName: string, body: any) => {
+  try {
+    const dataRef = db.collection(collectionName).doc()
+
+    const res = await dataRef.set(body)
+
+    return res
+  } catch (err) {
+    console.error('Error updating documents:', err)
+    throw err
+  }
+}
+
+export const doesCollectionExist = async (collectionName: string) => {
+  try {
+    const collections = await db.listCollections()
+    return collections.some((collection: any) => collection.id === collectionName)
+  } catch (error) {
+    console.error('Error checking collection existence:', error)
+    return false
+  }
+}

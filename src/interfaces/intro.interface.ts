@@ -1,5 +1,5 @@
 export interface Intro {
-  id: string
+  id?: string
   name: string
   title: string
   avatar: string
