@@ -47,7 +47,7 @@ const BlogInfo = async ({ params }: { params: { slug: string } }) => {
           post={post}
           className='bottom'
         />
-        <PostDetailForm />
+        <PostDetailForm postId={post.id} />
       </div>
     </section>
   )

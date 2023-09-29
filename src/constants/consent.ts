@@ -2,11 +2,13 @@ export enum DB {
   POSTS = 'posts',
   POST_LIKES = 'post-likes',
   POST_VIEWS = 'post-views',
+  POST_COMMENTS = 'post-comments',
   INTRO = 'intro',
   CONTACT_INFO = 'contact-info',
   CONTACT_ME = 'contact-me',
   META_TAGS = 'meta-tags',
   PORTFOLIOS = 'portfolios',
+  MIGRATIONS = 'migrations',
 }
 
 export enum URLS {
@@ -20,6 +22,8 @@ export enum URLS {
   CONTACT_ME = 'contact-me',
   META_TAGS = 'meta-tags',
   PORTFOLIO = 'portfolio',
+  MIGRATIONS = 'migrations',
+  SETUP = 'setup',
 }
 
 export enum META_TAGS {

@@ -3,8 +3,12 @@
 import Button from '../common/button'
 import { usePostDetailForm } from './post-detail-form-hook'
 
-const PostDetailForm: React.FC = (): JSX.Element => {
-  const { isLoading, comment, setComment, onSubmit } = usePostDetailForm()
+interface PostDetailFormProps {
+  postId?: string
+}
+
+const PostDetailForm: React.FC<PostDetailFormProps> = ({ postId }): JSX.Element => {
+  const { isLoading, comment, setComment, onSubmit } = usePostDetailForm(postId)
 
   return (
     <form

@@ -12,7 +12,7 @@ export async function getReq<T>(url: string): Promise<T> {
   }
 }
 
-export async function postReq(url: string, data: any): Promise<any> {
+export async function postReq(url: string, data?: any): Promise<any> {
   try {
     const res = await axios.post(`${baseUrl}/${url}`, data)
     return res.data

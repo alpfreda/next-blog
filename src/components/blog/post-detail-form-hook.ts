@@ -4,7 +4,9 @@ import { postReq } from '@/utils/next-axios'
 import { Dispatch, SetStateAction, useState } from 'react'
 import { ActionTypes, useNotifications } from '../notifications/notification-context'
 
-const usePostDetailForm = (): {
+const usePostDetailForm = (
+  postId?: string,
+): {
   comment: string
   isLoading: boolean
   setComment: Dispatch<SetStateAction<string>>
@@ -29,7 +31,7 @@ const usePostDetailForm = (): {
     } else {
       setIsLoading(true)
       try {
-        await postReq(URLS.BLOG_COMMENT, { comment })
+        await postReq(URLS.BLOG_COMMENT, { comment, postId })
         setComment('')
         addNotification({
           id: 'BLOG_SUCCESS_MESSAGE',
