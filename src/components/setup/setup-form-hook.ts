@@ -20,7 +20,7 @@ const useSetupForm = (): {
     dispatch({ type: ActionTypes.ADD_NOTIFICATION, payload: notification })
   }
 
-  async function onSubmit(formData: FormData) {
+  async function onSubmit() {
     setIsLoading(true)
     try {
       await postReq(URLS.SETUP)
