@@ -19,7 +19,7 @@ const SetupForm: React.FC = (): JSX.Element => {
       />
       <HeaderTitle title='Install next blog' />
       <p className='description'>
-        In order to get started, we must create tables on the Firebase. Please click on the "Setup" button below. Then you can update your database directly
+        In order to get started, we must create tables on the Firebase. Please click on the <strong>Setup</strong> button below. Then you can update your database directly
         from Firebase!
       </p>
       <Button
