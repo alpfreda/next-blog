@@ -39,7 +39,7 @@ const useContactForm = (): {
       } catch (e) {
         addNotification({
           id: 'CONTACT_SERVER_ERROR',
-          message: e instanceof Error ? e.message : 'Unexpected alert happened!',
+          message: e instanceof Error ? e.message : 'Unexpected error happened!',
           type: 'ERROR',
         })
       } finally {

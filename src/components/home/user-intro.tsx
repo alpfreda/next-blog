@@ -11,8 +11,8 @@ const UserIntro: React.FC<UserIntroProps> = ({ intro }) => {
       <div className='avatar'>
         <Image
           src={intro?.avatar || ''}
-          width={400}
-          height={200}
+          width={200}
+          height={100}
           alt={intro?.name || ''}
         />
       </div>

@@ -34,7 +34,7 @@ const useSetupForm = (): {
     } catch (e) {
       addNotification({
         id: 'SETUP_SERVER_ERROR',
-        message: e instanceof Error ? e.message : 'Unexpected alert happened!',
+        message: e instanceof Error ? e.message : 'Unexpected error happened!',
         type: 'ERROR',
       })
     } finally {

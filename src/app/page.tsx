@@ -17,8 +17,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Page() {
-  const intro = await getReq<Intro>(URLS.INTRO)
-  const posts = await getReq<Post[]>(URLS.LAST_POSTS)
+  const [intro, posts] = await Promise.all([getReq<Intro>(URLS.INTRO), getReq<Post[]>(URLS.LAST_POSTS)])
 
   return (
     <>
