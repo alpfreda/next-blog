@@ -1,5 +1,3 @@
-Certainly! Here's your message in Markdown format without any changes to the text:
-
 # Hello and welcome 👋
 
 This is a blog that consists of 4 pages, including the home page, portfolio page, blog page, and contact page, all of which were developed using Next.js with the app router feature. The database for this project is powered by Firebase.
