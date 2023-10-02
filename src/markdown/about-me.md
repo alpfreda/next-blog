@@ -1,13 +1,9 @@
 Hello, this is my first post, and I'd like to share my knowledge. Many times ago, I had the desire to share my knowledge, but I didn't have the time to do that.
 Now, I'm ready to share what I know.
 
-- **Name:** Mehdi
-- **Birth Year:** 1995
-- **Education:** Graduated in computer science.
-
 ### Professional Background
 
-Let me introduce myself - I'm Mehdi. In 1995, I entered this world, and as life progressed, I found my calling in computer science. With a degree in hand, I set
+Let me introduce myself - I'm Mehdi. In 1995, I found my calling in computer science. With a degree in hand, I set
 forth on a journey that has led me to become a front-end engineer. Since 2017, I've been crafting beautiful and functional digital experiences that captivate
 users.
 
