@@ -10,7 +10,7 @@ async function getPostLikesByIp(postId: string, ip: string) {
   return await get(DB.POST_LIKES, filter)
 }
 
-async function addPostView(post: Post, ip: string = '127.0.0.1') {
+async function addPostView(post: Post, ip: string) {
   const getView = await getPostLikesByIp(post.id ?? '', ip)
   if (!getView) {
     post.like += 1
@@ -23,9 +23,11 @@ async function addPostView(post: Post, ip: string = '127.0.0.1') {
 export async function POST(request: NextRequest) {
   try {
     const { postId } = await request.json()
+    const ip = (request.headers.get('x-forwarded-for') ?? '127.0.0.1').split(',')[0]
+
     const post = await getById(DB.POSTS, postId)
 
-    const returnPost = await addPostView(post, request.ip)
+    const returnPost = await addPostView(post, ip)
     return NextResponse.json(returnPost)
   } catch (e) {
     return handleErrorResponse(e)
