@@ -25,6 +25,9 @@ $gradient-start-color-dark: #a7cfdf;
 $gradient-middle-color-dark: #9ea5ff;
 $gradient-end-color-dark: #23538a;
 
+$intro-avatar-size: 9rem;
+$intro-title-max-width: 38rem;
+
 :root {
   --primary-color: #{$primary-color};
   --secondary-color: #{$secondary-color};
@@ -38,9 +41,6 @@ $gradient-end-color-dark: #23538a;
   --header-nav-item-active-color: #{$primary-color};
 
   --header-bg-color: #f5f5f5;
-
-  --intro-avatar-size: 9rem;
-  --intro-title-max-width: 38rem;
 
   --intro-title-start-color: #333;
   --intro-title-middle-color: #444;

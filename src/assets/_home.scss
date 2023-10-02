@@ -9,8 +9,8 @@
   }
 
   .avatar {
-    width: var(--intro-avatar-size);
-    height: var(--intro-avatar-size);
+    width: $intro-avatar-size;
+    height: $intro-avatar-size;
     border-radius: 5cap;
     overflow: hidden;
     margin-bottom: 1.5rem;
@@ -42,7 +42,7 @@
   .title {
     color: var(--intro-title-start-color);
     @include gradient-text(var(--intro-title-start-color), var(--intro-title-middle-color), var(--intro-title-end-color));
-    max-width: var(--intro-title-max-width);
+    max-width: $intro-title-max-width;
     font-weight: 300;
     animation-delay: 0.38s;
     font-size: 1.45rem;

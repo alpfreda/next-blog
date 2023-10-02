@@ -26,22 +26,6 @@
   }
 }
 
-.alert {
-  @include flexbox(row, center, flex-start);
-  gap: 0.5rem;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  color: #eee;
-
-  &.danger {
-    color: #f44336;
-  }
-
-  &.success {
-    color: #ffc107;
-  }
-}
-
 .form-group {
   @include flexbox(column);
   font-size: 1.1rem;

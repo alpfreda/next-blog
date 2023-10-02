@@ -25,8 +25,8 @@ const BlogInfo = async ({ params }: { params: { slug: string } }) => {
   let content = ''
 
   try {
-    const markdownData = await require(`../../../markdown/${post.content}.md`)
-    content = markdownData.default
+    const res = await fetch(post.content)
+    content = await res.text()
   } catch {}
 
   return (
