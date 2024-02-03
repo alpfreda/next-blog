@@ -24,7 +24,7 @@ const Portfolio: React.FC = async () => {
   return (
     <section className='portfolio'>
       <HeaderTitle title='Portfolio' />
-      <h3 className='header-sub-title'>Check out my pets projects</h3>
+      <h3 className='header-sub-title'>Check out my pet projects</h3>
       <PortfolioList items={sortedPortfolios} />
     </section>
   )
